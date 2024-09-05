@@ -93,7 +93,17 @@ counter();
 counter();
 
 //task_4.2
-//--
+function createSecret() {
+  let secretMessage = '';
+  return function () {
+    secretMessage = 'test';
+    return secretMessage;
+  };
+}
+
+let secret = createSecret();
+
+console.log(secret());
 
 //task_4.3
 function createCounterWithInitial(n_c) {
