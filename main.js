@@ -14,11 +14,7 @@ console.log(multiply(2, 4));
 
 //task_1.3
 function isEven(c) {
-  if (c % 2 === 0) {
-    return true;
-  } else {
-    return false;
-  }
+  return c % 2 === 0;
 }
 
 console.log(isEven(9));
@@ -68,7 +64,7 @@ console.log(fibonacci(6));
 //task_3.3
 function sum(n_s) {
   let sum_n = 0;
-  for (let i = 1; i <= 10; i++) {
+  for (let i = 1; i <= n_s; i++) {
     sum_n += i;
   }
   return sum_n;
@@ -96,7 +92,7 @@ counter();
 function createSecret() {
   let secretMessage = '';
   return function () {
-    secretMessage = 'test';
+    secretMessage = 'секретное слово';
     return secretMessage;
   };
 }
